@@ -35,8 +35,8 @@ This project was put together using create-react-app (CRA). You will not need to
 - [x] Create a new branch: git checkout -b `<firstName-lastName>`.
       Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [x] Push commits: git push origin `<firstName-lastName>`.
-
-
+ 
+ 
 ### Task 2: MVP
 
 **Planning**
