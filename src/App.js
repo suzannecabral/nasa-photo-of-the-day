@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import axios from 'axios';
 
 import dummyData from './dummyData';
 import ImgFrame from './imgFrame';
@@ -7,9 +8,28 @@ import TextFrame from './textFrame';
 
 
 function App() {
-  // const [image, setImage] = useState(dummyData)
 
-  const imgData = dummyData[2];
+  const [image, setImage] = useState(dummyData)
+  
+  useEffect(() => {
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-09-02')
+    .then(res => {
+      setImage(res.data)
+      console.log(res.data)
+    })
+    .catch(err => {
+      console.log('There was a problem with the Axios call');
+      debugger
+    })
+
+  }, [])
+
+
+
+
+
+
+  const imgData = image;
   
   const imgTitle = imgData.title
   const imgDate= imgData.date
