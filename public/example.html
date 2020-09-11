@@ -92,14 +92,15 @@ html { font-size: 62.5%; }
 
 
 body {
-  background-color:black;
-  color:white;
+  background-color:#101012;
+  color:#fafafa;
   font-family:"Ubuntu", sans-serif;
 }
 
 h1 {
   font-size:2.8rem;
   margin: 2rem 0 0 0 ;
+  order:10;
   
 }
 h2 {
@@ -120,7 +121,6 @@ p {
   font-weight:400;
   line-height:1.7rem;
   letter-spacing:.1px;
-  min-width: 30rem;
   margin:0 0 1rem 0;
   
 }
@@ -140,25 +140,41 @@ a {
 .nasaGallery {
   display:flex;
   flex-flow:row;
-  align-items:flex-start;
   height:100vh;
 }
 
 .textFrame{
   background-color:#22222a;
   padding: 4% 5% 2% 3%;
+  width:25%;
+  min-width:30rem;
   height:100vh;
-  max-width:32%;
+  display:flex;
+  flex-flow:column;
 }
 
 .imgFrame {
-  width:50px;
-  border:3px solid white;
-/*   overflow:hidden; */
+  width:100%;
+  display:flex;
+  flex-flow:column;
+  justify-content:center;
+  padding:2%;
 }
-/* img {
+.imgFrame a, img {
   object-fit:contain;
+  width:100%;
+}
+
+
+
+/* @media (max-width: 800px;){
+    div.imgFrame {
+        background-color:aqua;
+    }
 } */
+
+
+
 </style>
   
 </head>
@@ -170,12 +186,13 @@ a {
         <div class="App">
             <div class="nasaGallery">
                 <div class="textFrame">
+                    
+                    <h1>NASA Image of the Day</h1>
                     <h3>2020-09-02</h3>
                     <h2>Jupiter and the Moons</h2>
                     <p>How many moons do you see? Many people would say one, referring to the Earth's Moon, prominent on the lower left. But take a closer look at the object on the upper right. That seeming-star is actually the planet Jupiter, and your closer look might reveal that it is not alone – it is surrounded by some of its largest moons. From left to right these Galilean Moons are Io, Ganymende, Europa and Callisto. These moons orbit the Jovian world just like the planets of our Solar System orbit the Sun, in a line when seen from the side.  The featured single shot was captured from Cancun, Mexico last week as Luna, in its orbit around the Earth, glided past the distant planet.  Even better views of Jupiter are currently being captured by NASA's Juno spacecraft, now in a looping orbit around the Solar System's largest planet.  Earth's Moon will continue to pass nearly in front of both Jupiter and Saturn once a month (moon-th) as the two giant planets approach their own great conjunction in December.   Almost Hyperspace: Random APOD Generator</p>
                     <p class="author">Robert Fedez</p>
                     <a href="index.html">Return to the live site</a>
-                    <h1>NASA Image of the Day</h1>
                 </div>
                 <div class="imgFrame">
                     <a href="https://apod.nasa.gov/apod/image/2009/JupiterAndMoons_Fedez_1600.jpg">
