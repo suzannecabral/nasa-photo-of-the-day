@@ -1,5 +1,10 @@
 import React from "react";
+// import styled from 'styled-components'
 
+
+// const styledTextFrame = styled.div`
+
+// `
 const TextFrame = props => {
 
     const { imgTitle, imgDate, imgAuthor, imgDesc } = props

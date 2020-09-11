@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
 
-import dummyData from './dummyData';
+import dummyData from '../constants/dummyData';
 import ImgFrame from './imgFrame';
 import TextFrame from './textFrame';
 
