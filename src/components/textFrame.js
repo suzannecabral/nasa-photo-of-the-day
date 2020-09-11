@@ -3,10 +3,17 @@ import styled from 'styled-components'
 
 
 const StyledTextFrame = styled.div`
-  background-color:#101012;
-  color:#fafafa;
-  font-family:"Ubuntu", sans-serif;
-
+.textFrame{
+  background-color:#22222a;
+  padding: 4% 5% 2% 3%;
+  width:25%;
+  max-width:40rem;
+  min-width:30rem;
+  height:100vh;
+  display:flex;
+  flex-flow:column;
+  text-align:left;
+}
 
   h1 {
   font-size:2.8rem;
@@ -35,17 +42,13 @@ p {
   margin:0 0 1rem 0;
   
 }
-
-a {
-    text-decoration:none;
-    font-size:1.4rem;
-    font-weight:bold;
-    color:white;
+.date {
+  order:-1;
 }
-
 .author {
   border-bottom: 1px solid #66667f;
   padding-bottom: 2rem;
+  order:9;
 }
 `
 const TextFrame = props => {
@@ -59,8 +62,8 @@ const TextFrame = props => {
           <h1>NASA Image of the Day</h1>
           <h2>{imgTitle}</h2>
 
-          <p>{imgDate}</p>
-          <p>{imgAuthor}</p>
+          <h3 className="date">{imgDate}</h3>
+          <p className="author">{imgAuthor}</p>
           <p>{imgDesc}</p>
         </div>
         </StyledTextFrame>

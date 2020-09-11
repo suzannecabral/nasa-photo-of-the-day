@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
+import styled from 'styled-components'
+
 
 import dummyData from './dummyData';
 import ImgFrame from './imgFrame';
@@ -15,6 +17,8 @@ import TextFrame from './textFrame';
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 */
+
+
 
 
 function App() {
@@ -52,7 +56,7 @@ function App() {
 
   return (
     <div className="App">
-
+      {/* <StyledApp> */}
       <div className="nasaGallery">
 
           {/* TEXT FRAME JS */}
@@ -80,7 +84,7 @@ function App() {
         />
 
       </div>
-
+      {/* </StyledApp> */}
 
 
     </div>
