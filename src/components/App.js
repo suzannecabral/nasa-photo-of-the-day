@@ -18,7 +18,14 @@ import TextFrame from './textFrame';
 
 */
 
+const StyledApp = styled.div `
 
+  display:flex;
+  flex-flow:row;
+  height:100vh;
+
+
+`
 
 
 function App() {
@@ -56,8 +63,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* <StyledApp> */}
-      <div className="nasaGallery">
+      <StyledApp>
+      {/* <div className="nasaGallery"> */}
 
           {/* TEXT FRAME JS */}
           <TextFrame 
@@ -83,8 +90,8 @@ function App() {
           imgTitle={imgTitle}       
         />
 
-      </div>
-      {/* </StyledApp> */}
+      {/* </div> */}
+      </StyledApp>
 
 
     </div>

@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 
 const StyledTextFrame = styled.div`
-.textFrame{
-  background-color:#22222a;
+
+  /* background-color:#22222a; */
+  background-color:${props => props.theme.midBG};
   padding: 4% 5% 2% 3%;
   width:25%;
   max-width:40rem;
@@ -13,7 +14,7 @@ const StyledTextFrame = styled.div`
   display:flex;
   flex-flow:column;
   text-align:left;
-}
+
 
   h1 {
   font-size:2.8rem;
@@ -32,6 +33,7 @@ h3 {
 h3, .author {
   font-size:1.2rem;
   color:#66667f;
+  /* color:${props => props.theme.grayText} */
   font-weight:bold;
 }
 p {
@@ -58,14 +60,12 @@ const TextFrame = props => {
 
     return (
         <StyledTextFrame>
-        <div className="textFrame">
           <h1>NASA Image of the Day</h1>
           <h2>{imgTitle}</h2>
 
           <h3 className="date">{imgDate}</h3>
           <p className="author">{imgAuthor}</p>
           <p>{imgDesc}</p>
-        </div>
         </StyledTextFrame>
 
     )

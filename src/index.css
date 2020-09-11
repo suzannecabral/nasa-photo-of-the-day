@@ -80,3 +80,10 @@ a {
   font-weight:bold;
   color:white;
 }
+
+.testLink {
+  background-color:red;
+  width:100%;
+  display:block;
+  padding:.5rem;
+}
