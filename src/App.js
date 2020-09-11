@@ -2,12 +2,20 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
 
-import dummyData from '../constants/dummyData';
+import dummyData from './dummyData';
 import ImgFrame from './imgFrame';
 import TextFrame from './textFrame';
 
+
 // API KEY: QBWtySVEV71swXwrhhP9B5gPGj7H7EIOIvW0pL4u
 //Account ID: b08f122d-29f4-4a6c-9abf-8c54f2e291c5
+
+/*
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*/
+
 
 function App() {
 
