@@ -1,34 +1,190 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" /> -->
+    <!-- <meta
+      name="description"
+      content="Web site created using create-react-app"
+    /> -->
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <!-- <link rel="manifest" href="/manifest.json" /> -->
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+
+<!-- TAKE THESE OUT FOR LIVE STYLES -->
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+ <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="../src/dummyStyles.css">
+
+<!-- TAKE THESE OUT FOR LIVE STYLES -->
+
+<title>Nasa</title>
+
+<style>
+    /*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*FONT SIZE FOR REM PIXELS */
+html { font-size: 62.5%; } 
+
+/*END RESET----------------*/
+
+
+
+
+body {
+  background-color:black;
+  color:white;
+  font-family:"Ubuntu", sans-serif;
+}
+
+h1 {
+  font-size:2.8rem;
+  margin: 2rem 0 0 0 ;
+  
+}
+h2 {
+  font-size:2.3rem;
+  font-weight:400;
+  margin: 0 0 1.2rem 0;
+}
+h3 {
+  margin:0 0 .5rem 0;
+}
+h3, .author {
+  font-size:1.2rem;
+  color:#66667f;
+  font-weight:bold;
+}
+p {
+  font-size:1.4rem;
+  font-weight:400;
+  line-height:1.7rem;
+  letter-spacing:.1px;
+  min-width: 30rem;
+  margin:0 0 1rem 0;
+  
+}
+
+a {
+    text-decoration:none;
+    font-size:1.4rem;
+    font-weight:bold;
+    color:white;
+}
+
+.author {
+  border-bottom: 1px solid #66667f;
+  padding-bottom: 2rem;
+}
+
+.nasaGallery {
+  display:flex;
+  flex-flow:row;
+  align-items:flex-start;
+  height:100vh;
+}
+
+.textFrame{
+  background-color:#22222a;
+  padding: 4% 5% 2% 3%;
+  height:100vh;
+  max-width:32%;
+}
+
+.imgFrame {
+  width:50px;
+  border:3px solid white;
+/*   overflow:hidden; */
+}
+/* img {
+  object-fit:contain;
+} */
+</style>
+  
 </head>
+  
 <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     
-
-<div id="rootDiv">
-
-    <div class="nasaGallery">
-        <div class="textFrame">
-            <h1>NASA Image of the Day</h1>
-            <h2>{imgTitle}</h2>
-            <p>{imgDate}</p>
-            <p>{imgAuthor}</p>
-            <p>{imgDesc}</p>
-            
-        </div>
-        <div class="imgFrame">
-            <a href="imgURL">
-                <img src="imgURL" alt="imgTitle">
-            </a>
+    <div id="root">
+        <div class="App">
+            <div class="nasaGallery">
+                <div class="textFrame">
+                    <h3>2020-09-02</h3>
+                    <h2>Jupiter and the Moons</h2>
+                    <p>How many moons do you see? Many people would say one, referring to the Earth's Moon, prominent on the lower left. But take a closer look at the object on the upper right. That seeming-star is actually the planet Jupiter, and your closer look might reveal that it is not alone – it is surrounded by some of its largest moons. From left to right these Galilean Moons are Io, Ganymende, Europa and Callisto. These moons orbit the Jovian world just like the planets of our Solar System orbit the Sun, in a line when seen from the side.  The featured single shot was captured from Cancun, Mexico last week as Luna, in its orbit around the Earth, glided past the distant planet.  Even better views of Jupiter are currently being captured by NASA's Juno spacecraft, now in a looping orbit around the Solar System's largest planet.  Earth's Moon will continue to pass nearly in front of both Jupiter and Saturn once a month (moon-th) as the two giant planets approach their own great conjunction in December.   Almost Hyperspace: Random APOD Generator</p>
+                    <p class="author">Robert Fedez</p>
+                    <a href="index.html">Return to the live site</a>
+                    <h1>NASA Image of the Day</h1>
+                </div>
+                <div class="imgFrame">
+                    <a href="https://apod.nasa.gov/apod/image/2009/JupiterAndMoons_Fedez_1600.jpg">
+                        <img src="https://apod.nasa.gov/apod/image/2009/JupiterAndMoons_Fedez_1080.jpg" alt="Jupiter and the Moons">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-    
-</div>
-
-
 
 </body>
 </html>

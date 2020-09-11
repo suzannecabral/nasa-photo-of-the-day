@@ -6,13 +6,14 @@ import dummyData from './dummyData';
 import ImgFrame from './imgFrame';
 import TextFrame from './textFrame';
 
+// API KEY: QBWtySVEV71swXwrhhP9B5gPGj7H7EIOIvW0pL4u
 
 function App() {
 
   const [image, setImage] = useState(dummyData)
   
   useEffect(() => {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2020-09-02')
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=QBWtySVEV71swXwrhhP9B5gPGj7H7EIOIvW0pL4u&date=2020-09-02')
     .then(res => {
       setImage(res.data)
       console.log(res.data)
